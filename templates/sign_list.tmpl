@@ -1,0 +1,10 @@
+<html>
+	<h1>
+		List
+	</h1>
+	<ul>
+    {{ range . }}
+        <li>姓名: {{ .Name }}, 编号: {{ .Number }}</li>
+    {{ end }}
+    </ul>
+</html>

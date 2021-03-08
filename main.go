@@ -104,8 +104,8 @@ func main() {
 
 	r.POST("/empty", func(c *gin.Context) {
 		globalSingDataList = nil
-		c.JSON(http.StatusOK, gin.H{
-			"message": "success",
+		c.HTML(http.StatusOK, "manage.tmpl", gin.H{
+			"message": "数据清空成功!",
 		})
 	})
 
@@ -118,8 +118,8 @@ func main() {
 			})
 			return
 		}
-		c.JSON(http.StatusOK, gin.H{
-			"message": "success",
+		c.HTML(http.StatusOK, "manage.tmpl", gin.H{
+			"message": "数据从磁盘导入成功!",
 		})
 	})
 
